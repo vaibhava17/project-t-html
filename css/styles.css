@@ -1,16 +1,27 @@
-/*
-=============== 
-Fonts
-===============
-*/
+/* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+@font-face {
+  font-family: futuramedium;
+  src: url("./Components/assets/fonts/futura\ medium\ bt.ttf");
+}
+@font-face {
+  font-family: futurabook;
+  src: url("./Components/assets/fonts/Futura\ Book.ttf");
+}
+@font-face {
+  font-family: futurameditalic;
+  src: url("./Components/assets/fonts/Futura\ Medium\ Italic\ font.ttf");
+}
+@font-face {
+  font-family: cinzelbold;
+  src: url("./Components/assets/fonts/Cinzel-Bold.ttf");
+}
+@font-face {
+  font-family: cinzeldecorativebold;
+  src: url("./Components/assets/fonts/CinzelDecorative-Bold.ttf");
+}
 
-/*
-=============== 
-Variables
-===============
-*/
-
+/* Variables */
 :root {
   /* dark shades of primary color*/
   --clr-primary-1: hsl(6, 86%, 17%);
@@ -53,12 +64,8 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
 }
-/*
-=============== 
-Global Styles
-===============
-*/
 
+/* Global Styles */
 *,
 ::after,
 ::before {
@@ -125,6 +132,7 @@ p {
   }
   body {
     font-size: 1rem;
+    font-family: futuramedium;
   }
   h1,
   h2,
@@ -133,8 +141,8 @@ p {
     line-height: 1;
   }
 }
-/*  global classes */
 
+/*  Global Classes */
 .btn {
   text-transform: uppercase;
   background: transparent;
@@ -153,11 +161,11 @@ p {
   color: var(--clr-white);
   background: var(--clr-black);
 }
+
 /* section */
 .section {
   padding: 5rem 0;
 }
-
 .section-center {
   width: 90vw;
   margin: 0 auto;
@@ -335,6 +343,7 @@ header::after {
   background: var(--clr-secondary-1);
   box-shadow: var(--dark-shadow);
 }
+
 /* Cover */
 .cover img{
   width: 100%;
@@ -342,6 +351,7 @@ header::after {
   height: auto;
   object-fit: cover;
 }
+
 /* Footer */
 .footer-top {
   background: var(--clr-primary-5);
