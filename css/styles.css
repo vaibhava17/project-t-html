@@ -2,23 +2,23 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 @font-face {
   font-family: futuramedium;
-  src: url("./Components/assets/fonts/futura\ medium\ bt.ttf");
+  src: url("../fonts/futura\ medium\ bt.ttf");
 }
 @font-face {
   font-family: futurabook;
-  src: url("./Components/assets/fonts/Futura\ Book.ttf");
+  src: url("../fonts/Futura\ Book.ttf");
 }
 @font-face {
   font-family: futurameditalic;
-  src: url("./Components/assets/fonts/Futura\ Medium\ Italic\ font.ttf");
+  src: url("../fonts/Futura\ Medium\ Italic\ font.ttf");
 }
 @font-face {
   font-family: cinzelbold;
-  src: url("./Components/assets/fonts/Cinzel-Bold.ttf");
+  src: url("../fonts/Cinzel-Bold.ttf");
 }
 @font-face {
   font-family: cinzeldecorativebold;
-  src: url("./Components/assets/fonts/CinzelDecorative-Bold.ttf");
+  src: url("../fonts/CinzelDecorative-Bold.ttf");
 }
 
 /* Variables */
