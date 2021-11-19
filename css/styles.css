@@ -54,8 +54,8 @@
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-black: #222;
-  --ff-primary: "Roboto", sans-serif;
-  --ff-secondary: "Open Sans", sans-serif;
+  --ff-primary: futurabook;
+  --ff-secondary: futuramedium;
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
@@ -305,7 +305,7 @@ header::after {
 .card .card-title{
   padding: 0 .5rem .5rem .5rem;
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 .card .card-img img{
   width: 100%;
