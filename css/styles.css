@@ -20,7 +20,18 @@
   font-family: cinzeldecorativebold;
   src: url("../fonts/CinzelDecorative-Bold.ttf");
 }
+*::-webkit-scrollbar {
+  width: 10px;
+}
 
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #70707060;
+  border-radius: 10px;
+}
 /* Variables */
 :root {
   /* dark shades of primary color*/
@@ -31,10 +42,10 @@
   /* primary/main color */
   --clr-primary-5: 	hsl(6, 45%, 12%);
   /* lighter shades of primary color */
-  --clr-primary-6: hsl(6, 89%, 70%);
-  --clr-primary-7: hsl(6, 90%, 76%);
-  --clr-primary-8: hsl(6, 86%, 81%);
-  --clr-primary-9: hsl(6, 90%, 88%);
+  --clr-primary-6: hsl(7, 24%, 21%);
+  --clr-primary-7: hsl(5, 15%, 29%);
+  --clr-primary-8: hsl(6, 10%, 38%);
+  --clr-primary-9: hsl(8, 7%, 47%);
   --clr-primary-10: hsl(6, 100%, 96%);
   /* Secondary - used for headings */
   --clr-secondary-1: hsl(49, 69%, 35%);
@@ -74,18 +85,23 @@
   box-sizing: border-box;
 }
 body {
-  font-family: var(--ff-secondary);
   background: var(--clr-secondary-10);
   color: var(--clr-secondary-1);
   line-height: 1.5;
   font-size: 0.875rem;
 }
+section{
+  font-family: var(--ff-secondary);
+}
+footer{
+  font-family: var(--ff-secondary);
+}
 ul {
   list-style-type: none;
 }
 a {
-  text-decoration: none;
-  color: var(--clr-white);
+  text-decoration: none !important;
+  color: var(--clr-white) !important;
 }
 img {
   display: block;
@@ -102,6 +118,7 @@ h4 {
   font-family: var(--ff-primary);
 }
 h1 {
+  color: var(--clr-secondary-1);
   font-size: 3rem;
 }
 h2 {
@@ -115,7 +132,7 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-secondary-5);
+  color: var(--clr-white);
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -184,6 +201,7 @@ main {
 section h1{
   color: var(--clr-secondary-1);
   font-size: 2.5em;
+  font-weight: 600;
 }
 section hr {
   border-top: 3px solid var(--clr-secondary-1);
@@ -242,7 +260,7 @@ header::after {
   z-index: -2;
 }
 .navbar{
-  position: absolute;
+  position: absolute !important;
   top: 0;
   left: 0;
   width: 100%;
@@ -255,13 +273,14 @@ header::after {
   padding: 20px 2rem;
 }
 .heading{
+  font-family: var(--ff-secondary) !important;
   text-align: center;
   padding: 10%;
 }
 
 /* About Us */
 .about {
-  background-color: var(--clr-white);
+  background-color: var(--clr-primary-5);
   padding: 2rem;
   text-align: center;
 }
@@ -306,6 +325,7 @@ header::after {
   padding: 0 .5rem .5rem .5rem;
   font-size: 1.1rem;
   font-weight: 500;
+  color: var(--clr-secondary-1);
 }
 .card .card-img img{
   width: 100%;
@@ -313,13 +333,16 @@ header::after {
   object-fit: cover;
   border-radius: var(--radius);
 }
+
 /* .card .card-img:hover{
   box-shadow: var(--light-shadow);
   transform: scale(1.1);
 } */
-.card .card-text{
+
+.card .card-text p{
   padding: .5rem .5rem 0 .5rem;
   font-size: 0.875rem;
+  color: var(--clr-secondary-4);
 }
 .card .card-text p:hover{
   color: var(--clr-secondary-1);
@@ -332,9 +355,9 @@ header::after {
   background: var(--clr-secondary-2);
   color: var(--clr-white);
   border: none;
-  padding: .8rem .6rem;
+  padding: .5rem .6rem;
   font-size: 0.875rem;
-  letter-spacing: var(--spacing);
+  letter-spacing: 1px;
   text-transform: uppercase;
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
@@ -392,7 +415,7 @@ header::after {
   padding: 0 0 10px 0;
   font-size: 0.9em;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-rows: 1fr;
   grid-gap: 1vw;
 }
@@ -420,12 +443,14 @@ header::after {
 }
 .footer-bottom-left h6 {
   font-weight: 300;
+  font-size: 0.67em;
 }
 .footer-bottom-right {
   margin: 10px auto;
 }
 .footer-bottom-right h6 {
   font-weight: 300;
+  font-size: 0.67em;
 }
 @media (max-width: 764px) {
   .footer-top {
@@ -450,4 +475,34 @@ header::after {
   .footer-bottom-right {
     margin: 0 auto 5px auto;
   }
+}
+
+/* Contact */
+
+.contact{
+  background-image: url(../assets/images//product-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background-tint {
+  background-color: #00000060;
+  background-blend-mode: multiply;
+}
+.contact-content{
+  background-color: var(--clr-primary-5);
+  border-radius: var(--radius);
+}
+.contact-form .contact-left p{
+  color: var(--clr-secondary-1);
+  width: fit-content;
+  padding: 0.2rem 1rem;
+  border-radius: 10px;
+  box-shadow: var(--light-shadow);
+}
+.form-group label{
+  color: var(--clr-secondary-1);
+  font-size: 1.5em;
+}
+.form-group textarea{
+  height: 120px;
 }
